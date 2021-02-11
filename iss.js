@@ -1,13 +1,13 @@
 const request = require('request');
 
-let url = "https://api.ipify.org?format=json";
+
 
 const fetchMyIp = function(callback) {
+  let url = "https://api.ipify.org?format=json";
   request(url, (error, response, body) => {
    
     if (error) {
-      callback(error, null);
-      return;
+      return callback(error, null);
     }
 
     if (response.statusCode !== 200) {
@@ -15,8 +15,9 @@ const fetchMyIp = function(callback) {
       callback(Error(msg), null);
       return;
     }
-
-    console.log(body.body);
+    const ip = JSON.parse(body).ip;
+    callback(null, ip);
+    //console.log(ip);
   });
 };
 
