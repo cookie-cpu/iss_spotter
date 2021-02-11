@@ -3,6 +3,7 @@ const {fetchCoordsByIp} = require('./iss.js');
 const {fetchISSFlyOverTimes} = require('./iss.js');
 const {nextISSTimesForMyLocation} = require('./iss.js');
 
+
 nextISSTimesForMyLocation((error, passTimes) => {
 
   if (error){
@@ -11,6 +12,10 @@ nextISSTimesForMyLocation((error, passTimes) => {
 
   console.log(passTimes);
 })
+
+
+
+
 
 // fetchCoordsByIp("205.200.45.176", () => {
 //   //console.log(error, data)
