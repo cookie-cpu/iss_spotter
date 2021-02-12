@@ -41,7 +41,7 @@ const fetchCoordsByIp = function(ip, callback) {
     coords.latitude = latitude;
     coords.longitude = longitude;
 
-    console.log(coords);
+    //console.log(coords);
 
     callback(null, coords);
   });
