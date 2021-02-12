@@ -12,7 +12,8 @@ nextISSTimesForMyLocation((error, passTimes) => {
 
 
   for (let pass of passTimes){
-    console.log(`Duration is ${pass.duration} \n Risetime is ${pass.risetime}`)
+    console.log(`Next pass is at ${pass.risetime} for ${pass.duration} seconds`)
+    //console.log(`Duration is ${pass.duration} \n Risetime is ${pass.risetime}`)
   }
   //console.log(passTimes);
   //console.log(`Next pass is at ${passTimes.risetime} for ${passTimes.duration} seconds`)
