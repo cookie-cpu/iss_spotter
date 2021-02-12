@@ -1,7 +1,7 @@
 // const { fetchCoordsByIp } = require('./iss_promised');
 // const { fetchMyIp } = require('./iss_promised');
 // const { fetchISSFlyOverTimes } = require('./iss_promised.js')
-const {nextISSTimesForMyLocation} = require('./iss_promised.js')
+const {nextISSTimesForMyLocation} = require('./iss_promised.js');
 
 const printPassTimes = function(passTime) {
   for (const pass of passTime) {
@@ -15,7 +15,9 @@ const printPassTimes = function(passTime) {
 nextISSTimesForMyLocation()
 
   .then((passTimes) => {
-    printPassTimes(passTimes)})
+    printPassTimes(passTimes);
+  })
 
   .catch((error) => {
-    console.log("Error!", error.message)});
+    console.log("Error!", error.message);
+  });
